@@ -1,0 +1,28 @@
+.header__burger {
+  width: 28px;
+  height: 3px;
+  background: #000;
+}
+
+.header__burger::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #000;
+  transform: translateY(-10px);
+}
+
+.header__burger::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #000;
+  transform: translateY(7px);
+}
+
+.header__burger-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
