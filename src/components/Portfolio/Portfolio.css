@@ -1,0 +1,125 @@
+.portfolio {
+  padding: 100px 70px 125px;
+}
+
+.portfolio__titile {
+  max-width: 250px;
+  font-family:'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  color: #A0A0A0;
+  mix-blend-mode: normal;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+.portfolio__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio__link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio__subtitle {
+  max-width: 880px;
+  font-family:'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin: 0;
+  padding-bottom: 19px;
+}
+
+.portfolio__wrapper::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #E8E8E8;
+  margin-bottom: 20px;
+}
+
+.portfolio__wrapper:last-of-type .portfolio__subtitle {
+  padding-bottom: 0;
+}
+
+.portfolio__wrapper:last-of-type::after {
+  display: none;
+}
+
+.portfolio__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.portfolio__link:hover {
+  cursor: pointer;
+}
+
+.portfolio__arrow {
+  width: 29px;
+  height: 60px;
+}
+
+.portfolio__arrow:hover {
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 1270px) {
+  .portfolio {
+    padding-right: 5.5%;
+    padding-left: 5.5%;
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio {
+    padding: 90px 50px 90px;
+  }
+  .portfolio__subtitle {
+    font-size: 28px;
+    line-height: 50px;
+  }
+  .portfolio__titile {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .portfolio__arrow {
+    width: 27px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .portfolio {
+    padding: 69px 14px 70px;
+  }
+  .portfolio__titile {
+    max-width: 292px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 40px;
+  }
+  .portfolio__subtitle {
+    max-width: 250px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .portfolio__link {
+    align-self: flex-start;
+  }
+  .portfolio__arrow {
+    width: 18px;
+    height: 28px;
+  }
+}
