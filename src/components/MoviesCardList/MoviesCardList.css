@@ -24,6 +24,15 @@
   margin-bottom: 80px;
 }
 
+.film-list__error {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-family: 'Inter', Arial, sans-serif;
+  max-width: 400px;
+  align-self: center;
+}
+
 .film-list__button-none {
   display: none;
 }

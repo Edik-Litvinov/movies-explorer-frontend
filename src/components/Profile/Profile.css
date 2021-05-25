@@ -53,6 +53,32 @@
   padding: 0;
 }
 
+.profile__error {
+  display: inline-block;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #EE3465;
+  max-width: 260px;
+}
+
+.profile__response-message {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #EE3465;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile__response-message_green {
+  color: green;
+}
+
 .profile__input:focus {
   outline-color: #FF6838;
 }
@@ -69,6 +95,10 @@
   margin-top: 220px;
   width: 410px;
   background: transparent;
+}
+
+.profile__button-disabled {
+  opacity: .5;
 }
 
 .profile__button:hover {
