@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "npm run build && scp -r ./build/* edik@178.154.198.143:/home/edik/movies-explorer-frontend",
+    "deploy": "npm run build && scp -r ./build/* edik@178.154.227.4:/home/edik/movies-explorer-frontend",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
