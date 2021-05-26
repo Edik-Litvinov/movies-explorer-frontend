@@ -1,0 +1,112 @@
+.project {
+  max-width: 1280px;
+}
+
+.project__list {
+  max-width: 1140px;
+  padding: 70px 70px 0;
+  padding-bottom: 110px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(319px, 550px));
+}
+
+.project__item {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+}
+
+.project__item_bold {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-right: 40px;
+  margin-bottom: 26px;
+}
+
+.project__item_light {
+  font-size: 14px;
+  line-height: 20px;
+  margin-right: 40px;
+  color: #000;
+}
+
+ .project__item_bold:nth-of-type(2) {
+  margin-right: 0;
+}
+
+.project__item_light:last-of-type {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1270px) {
+  .project__list {
+    padding: 5.5%;
+  }
+}
+
+ @media screen and (max-width: 768px) {
+  .project__list {
+    padding: 70px 50px 93px;
+    grid-template-columns: repeat(2, minmax(auto, 319px));
+  }
+  .project__item_light:last-of-type {
+    margin-right: 30px;
+  }
+  .project__item_light {
+    font-size: 12px;
+    line-height: 18px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project__list {
+    padding: 60px 18px;
+    grid-template-columns: minmax(auto, 284px);
+    max-width: 284px;
+    margin: 0 auto;
+  }
+  .project__item_bold {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 0;
+  }
+  .project__item_light {
+    font-size: 11px;
+    line-height: 16px;
+    margin: 0;
+    margin-bottom: 56px;
+    padding: 0;
+  }
+  .project__item_bold:nth-of-type(2) {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .project__item_light:last-of-type {
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .project__item_bold_fist {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .project__item_bold_second {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .project__item_light_thrid {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .project__item_light_four {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin-bottom: 0;
+  }
+}

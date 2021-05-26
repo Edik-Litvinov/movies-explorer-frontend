@@ -1,0 +1,139 @@
+.techs {
+  background: #F5F5F5
+}
+
+.techs__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.techs__title {
+  max-width: 600px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 58px;
+  color: #000;
+  letter-spacing: -0.04em;
+  padding-top: 90px;
+  margin: 0;
+}
+
+.techs__subtitle {
+  max-width: 460px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000;
+  padding-top: 26px;
+  margin: 0;
+  padding-bottom: 100px;
+}
+
+.techs__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-bottom: 100px;
+}
+
+.techs__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 60px;
+  background: #E8E8E8;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+}
+
+.techs__item:last-of-type {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .techs__title {
+    padding-top: 80px;
+    font-size: 50px;
+    line-height: 58px
+  }
+  .techs__subtitle {
+    padding-top: 22px;
+    padding-bottom: 83px;
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 360px;
+  }
+  .techs__list {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 90px;
+  }
+  .techs__item {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .techs__title {
+    max-width: 292px;
+    padding-top: 60px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .techs__subtitle {
+    padding-top: 24px;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-bottom: 50px;
+    font-size: 11px;
+    line-height: 16px;
+    max-width: 292px;
+  }
+  .techs__list {
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 71px 70px;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .techs__wrapper {
+    padding: 0 14px;
+  }
+  .techs__item {
+    font-size: 12px;
+    line-height: 15px;
+    width: 84px;
+    height: 57px;
+    margin-bottom: 10px;
+  }
+  .techs__item:last-of-type {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .techs__item:nth-child(2n) {
+    margin-right: 0px;
+  }
+}
