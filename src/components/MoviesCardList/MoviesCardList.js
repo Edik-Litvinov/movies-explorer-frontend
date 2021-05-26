@@ -66,7 +66,9 @@ function MoviesCardList({ films, loader, erorrFilms, notFoundFilms, saveMovies, 
           : notFoundFilms
           ? <p className='film-list__error'>{ notFoundFilms }</p>
           : renderFilms.map((film) =>
-            <MoviesCard key={ film.id } film={ film } handleLikeFilm={ handleLikeFilm } savedMovie={ saveMovies }/>)
+            <MoviesCard key={ film.id } film={ film } handleLikeFilm={ handleLikeFilm } savedMovie={ saveMovies }
+            handleDeleteMovie={ handleDeleteMovie }
+            />)
 
         : erorrFilms
         ? <p className="film-list__error">

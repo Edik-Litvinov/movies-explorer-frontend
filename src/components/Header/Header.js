@@ -6,7 +6,7 @@ import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import logo from '../../images/logo.svg';
 
-function Header({ burger }) {
+function Header({ burger, isLogin }) {
   const { pathname } = useLocation();
   const displayHeader = ['/profile', '/movies', '/saved-movies', '/']
   const transparentHeader = ['/profile', '/movies', '/saved-movies']
@@ -15,19 +15,19 @@ function Header({ burger }) {
     return (
       <>
       { (displayHeader.includes(pathname)) &&
-        <div className={ `header ${transparentHeader.includes(pathname) && 'header_transparet'}` }>
+        <div className={ `header ${(transparentHeader.includes(pathname) || isLogin) && 'header_transparet'}` }>
           <div className='header__wrapper'>
             <Link className='header__home' to='/'>
               <img className='header__image' src={ logo } alt='Лого'/>
             </Link>
-            { pathname === '/' &&
-            <>
+            { isLogin
+            ? ((transparentHeader.includes(pathname) || isLogin ) && width > 768) &&  <Navigation />
+            : <>
               <Link to='/signup' className='header__signup'>Регистрация</Link>
               <Link to='/signin' className='header__signin'>Войти</Link>
             </>
             }
-            { ((transparentHeader.includes(pathname)) && width > 768) &&  <Navigation /> }
-            { (pathname !== '/' && (width <= 768)) && <BurgerMenu burger={ burger }/> }
+            { (isLogin && (width <= 768)) && <BurgerMenu burger={ burger }/> }
           </div>
         </div>
       }

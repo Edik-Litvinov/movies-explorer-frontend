@@ -91,7 +91,6 @@ function App() {
   function handleLikeFilm(data) {
     mainApi.postSavedMovies(data)
     .then((res) => {
-      console.log(res)
       setSaveMovies([ ...saveMovies, res ]);
     })
     .catch((err) => console.log(err))
@@ -350,7 +349,7 @@ function App() {
   <CurrentUserContext.Provider value={ currentUser }>
     <div className='page' onClick={ resetResponseMessage }>
       <div className='page__container'>
-      <Header burger={ burgerClick } />
+      <Header burger={ burgerClick } isLogin={ isLogin }/>
       <div className='content'>
           <Switch>
             <Route exact path='/'>
@@ -368,6 +367,7 @@ function App() {
             isLogin={ isLogin } films={ films } loader={ loader } erorrFilms={ erorrFilms }
             handleSearchShortFilms={ handleSearchShortFilms } checkCheckbox={ checkCheckbox }
             notFoundFilms={ notFoundFilms } handleLikeFilm={ handleLikeFilm } saveMovies={ saveMovies }
+            handleDeleteMovie={ handleDeleteMovie }
             />
 
             <ProtectedRoute path='/saved-movies' component={ SavedMovies } films={ films } isLogin={ isLogin }

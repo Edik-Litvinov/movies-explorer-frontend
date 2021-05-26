@@ -17,7 +17,8 @@ function MoviesCard({ film, handleLikeFilm, savedMovie, handleDeleteMovie }) {
 
   function handleLike(e) {
     if(liked) {
-      return
+      const movieId = savedMovie.find((item) => item.movieId === film.id);
+      handleDeleteMovie(movieId._id)
     } else {
       handleLikeFilm(film);
     }
@@ -48,7 +49,7 @@ function MoviesCard({ film, handleLikeFilm, savedMovie, handleDeleteMovie }) {
         </div>
         <button className='film__button'>
           { pathname === '/movies' && !liked && <img className='film__like' onClick={ handleLike } src={ disabledLike} alt='Лайк'/> }
-          { pathname === '/movies' && liked && <img className='film__like' src={ like } alt='Лайк'/> }
+          { pathname === '/movies' && liked && <img className='film__like' onClick={ handleLike } src={ like } alt='Лайк'/> }
           { pathname === '/saved-movies' &&  <img className='film__like' src={ cross } alt='Кнопка удаления' onClick={ deleteMovie }/> }
         </button>
       </div>

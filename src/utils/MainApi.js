@@ -32,7 +32,6 @@ class MainApi {
   }
 
   postSavedMovies(data) {
-    console.log(data)
     return fetch(`${this.baseUrl}/movies`, {
       method: 'POST',
       headers: this.headers,
